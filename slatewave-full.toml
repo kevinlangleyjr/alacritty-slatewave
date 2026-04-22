@@ -1,0 +1,28 @@
+# Slatewave — Alacritty full bundle
+# https://getslatewave.com
+#
+# Palette + opinionated typography/cursor/window defaults. Imports the base
+# `slatewave.toml` for colors, then layers font (Hack Nerd Font Mono), a
+# non-blinking block cursor, and a fully opaque, unblurred window — the same
+# defaults used across the Slatewave family.
+#
+# Install note: this file assumes `slatewave.toml` lives at
+# `~/.config/alacritty/themes/slatewave.toml`. If you installed it somewhere
+# else, edit the import path below.
+
+[general]
+import = ["~/.config/alacritty/themes/slatewave.toml"]
+
+[font]
+size   = 14.0
+normal      = { family = "Hack Nerd Font Mono", style = "Regular" }
+bold        = { family = "Hack Nerd Font Mono", style = "Bold" }
+italic      = { family = "Hack Nerd Font Mono", style = "Italic" }
+bold_italic = { family = "Hack Nerd Font Mono", style = "Bold Italic" }
+
+[cursor]
+style = { shape = "Block", blinking = "Off" }
+
+[window]
+opacity = 1.0
+blur    = false

@@ -12,7 +12,12 @@ A Slatewave theme for [Alacritty](https://alacritty.org) — slate foundation, t
 
 ## What it styles
 
-Slatewave for Alacritty is a single TOML file tuned against Alacritty's full color schema — not just the 16 ANSI colors. It sets:
+Slatewave for Alacritty ships as two files. Pick one:
+
+- **`slatewave.toml`** — palette only. Colors, cursor tint, selection, search, hints, footer. Composes with whatever font, window, and cursor-shape settings you already have.
+- **`slatewave-full.toml`** — palette + opinionated typography. Imports `slatewave.toml`, then adds Hack Nerd Font Mono at 14pt, a non-blinking block cursor, and a fully opaque, unblurred window. Use this if you want the whole Slatewave house style in one import.
+
+The palette itself is tuned against Alacritty's full color schema — not just the 16 ANSI colors. It sets:
 
 - **ANSI 0–15** — mirrored from the VSCode Slatewave terminal block so `ls --color`, `git diff`, and 256-color TUIs all read identically across your editor and terminal
 - **Background** — slate `#282c34`, matching the VSCode editor background
@@ -28,7 +33,7 @@ Slatewave for Alacritty is a single TOML file tuned against Alacritty's full col
 
 ## Installation
 
-### As an Alacritty theme import
+### Palette only (`slatewave.toml`)
 
 Alacritty 0.13+ reads TOML config and supports importing theme files. The recommended layout is `~/.config/alacritty/themes/` for user-managed themes.
 
@@ -47,36 +52,33 @@ import = ["~/.config/alacritty/themes/slatewave.toml"]
 
 Alacritty watches its config file and applies theme changes live — no restart needed.
 
+### Palette + typography (`slatewave-full.toml`)
+
+The full bundle assumes `slatewave.toml` is installed at the standard path above, then imports it and adds font / cursor / window defaults. Requires [Hack Nerd Font](https://www.nerdfonts.com/font-downloads) — specifically the Mono variant, so Nerd icons stay single-cell in `lazygit`, `btop`, and `ls`.
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/kevinlangleyjr/alacritty-slatewave/main/slatewave-full.toml \
+  -o ~/.config/alacritty/themes/slatewave-full.toml
+```
+
+Then in `~/.config/alacritty/alacritty.toml`:
+
+```toml
+[general]
+import = ["~/.config/alacritty/themes/slatewave-full.toml"]
+```
+
 ### From a local clone
 
 ```sh
 git clone https://github.com/kevinlangleyjr/alacritty-slatewave
-cp alacritty-slatewave/slatewave.toml ~/.config/alacritty/themes/slatewave.toml
+cp alacritty-slatewave/slatewave.toml      ~/.config/alacritty/themes/
+cp alacritty-slatewave/slatewave-full.toml ~/.config/alacritty/themes/  # optional
 ```
 
 ### Inline
 
 If you'd rather not manage a separate theme file, paste the contents of [`slatewave.toml`](./slatewave.toml) directly into your `~/.config/alacritty/alacritty.toml` — the `[colors.*]` tables work at the top level of the main config too.
-
-### Recommended config
-
-For the cleanest match with the companion themes:
-
-```toml
-[general]
-import = ["~/.config/alacritty/themes/slatewave.toml"]
-
-[font]
-normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
-size = 14.0
-
-[cursor]
-style = { shape = "Block", blinking = "Off" }
-
-[window]
-opacity = 1.0
-blur = false
-```
 
 ---
 
