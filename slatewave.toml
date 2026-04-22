@@ -1,0 +1,74 @@
+# Slatewave — Alacritty theme
+# https://getslatewave.com
+#
+# A calm, slate-and-teal palette tuned to match the Slatewave theme family
+# (VSCode, Obsidian, oh-my-posh, Ghostty, iTerm2). ANSI mappings mirror the
+# VSCode theme so terminal output stays visually aligned across editor and
+# terminal.
+
+[colors.primary]
+background = "#282c34"
+foreground = "#e2e8f0"
+dim_foreground    = "#cbd5e1"
+bright_foreground = "#f1f5f9"
+
+[colors.cursor]
+text   = "#282c34"
+cursor = "#5eead4"
+
+[colors.vi_mode_cursor]
+text   = "#282c34"
+cursor = "#99f6e4"
+
+[colors.selection]
+text       = "#e2e8f0"
+background = "#334155"
+
+# Sky for unfocused matches, teal for the focused one — mirrors VSCode's
+# findMatchHighlight / findMatch split.
+[colors.search.matches]
+foreground = "#282c34"
+background = "#38bdf8"
+
+[colors.search.focused_match]
+foreground = "#282c34"
+background = "#5eead4"
+
+[colors.footer_bar]
+foreground = "#e2e8f0"
+background = "#21252b"
+
+# Hint leader in amber, remainder in the darker amber — readable against slate.
+[colors.hints.start]
+foreground = "#282c34"
+background = "#fbbf24"
+
+[colors.hints.end]
+foreground = "#e2e8f0"
+background = "#b45309"
+
+[colors.line_indicator]
+foreground = "None"
+background = "None"
+
+# Normal — mirrors terminal.ansi* in vscode-slatewave
+[colors.normal]
+black   = "#1e293b"
+red     = "#fb7185"
+green   = "#5eead4"
+yellow  = "#b45309"
+blue    = "#38bdf8"
+magenta = "#b388ff"
+cyan    = "#0e7490"
+white   = "#e2e8f0"
+
+# Bright — mirrors terminal.ansiBright* in vscode-slatewave
+[colors.bright]
+black   = "#475569"
+red     = "#ef5350"
+green   = "#99f6e4"
+yellow  = "#fbbf24"
+blue    = "#7dd3fc"
+magenta = "#c4b5fd"
+cyan    = "#67e8f9"
+white   = "#f1f5f9"
