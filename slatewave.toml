@@ -41,11 +41,11 @@ background = "#21252b"
 # Hint leader in amber, remainder in the darker amber — readable against slate.
 [colors.hints.start]
 foreground = "#282c34"
-background = "#fbbf24"
+background = "#fcd34d"
 
 [colors.hints.end]
 foreground = "#e2e8f0"
-background = "#b45309"
+background = "#f59e0b"
 
 [colors.line_indicator]
 foreground = "None"
@@ -56,7 +56,7 @@ background = "None"
 black   = "#1e293b"
 red     = "#fb7185"
 green   = "#5eead4"
-yellow  = "#b45309"
+yellow  = "#f59e0b"
 blue    = "#38bdf8"
 magenta = "#b388ff"
 cyan    = "#0e7490"
@@ -67,7 +67,7 @@ white   = "#e2e8f0"
 black   = "#475569"
 red     = "#ef5350"
 green   = "#99f6e4"
-yellow  = "#fbbf24"
+yellow  = "#fcd34d"
 blue    = "#7dd3fc"
 magenta = "#c4b5fd"
 cyan    = "#67e8f9"
