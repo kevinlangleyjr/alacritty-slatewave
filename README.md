@@ -34,7 +34,7 @@ The palette itself is tuned against Alacritty's full color schema — not just t
 - **Vi-mode cursor** — teal-200 `#99f6e4`, distinguishable from the regular cursor at a glance
 - **Selection** — slate-700 `#334155` with slate-200 text, for a calm, non-competing highlight
 - **Search** — sky `#38bdf8` for unfocused matches, teal `#5eead4` for the focused match (mirrors VSCode's `findMatchHighlight` / `findMatch` split)
-- **Hints** — amber `#fbbf24` leader on amber-700 `#b45309` tail, for `⌘`-click-replacement keyboard hints
+- **Hints** — amber `#fcd34d` leader on amber-500 `#f59e0b` tail, for `⌘`-click-replacement keyboard hints
 - **Footer bar** — chrome `#21252b` background matching the VSCode activity bar
 
 ---
@@ -107,7 +107,8 @@ Slatewave shares its palette with the companion themes. The anchor colors:
 | ![#38bdf8](https://placehold.co/20x20/38bdf8/38bdf8.png) | `#38bdf8` | sky-400 | **search matches**, ANSI 4 (blue) |
 | ![#b388ff](https://placehold.co/20x20/b388ff/b388ff.png) | `#b388ff` | — | ANSI 5 (magenta) |
 | ![#fb7185](https://placehold.co/20x20/fb7185/fb7185.png) | `#fb7185` | rose-400 | ANSI 1 (red) |
-| ![#fbbf24](https://placehold.co/20x20/fbbf24/fbbf24.png) | `#fbbf24` | amber-400 | **hint leader**, ANSI 11 (bright yellow) |
+| ![#f59e0b](https://placehold.co/20x20/f59e0b/f59e0b.png) | `#f59e0b` | amber-500 | **hint tail**, ANSI 3 (yellow) |
+| ![#fcd34d](https://placehold.co/20x20/fcd34d/fcd34d.png) | `#fcd34d` | amber-300 | **hint leader**, ANSI 11 (bright yellow) |
 
 ### ANSI mapping
 
@@ -118,7 +119,7 @@ Mirrors the `terminal.ansi*` block from [vscode-slatewave](https://github.com/ke
 | Black | `#1e293b` slate-800 | `#475569` slate-600 |
 | Red | `#fb7185` rose-400 | `#ef5350` |
 | Green | `#5eead4` teal-300 | `#99f6e4` teal-200 |
-| Yellow | `#b45309` amber-700 | `#fbbf24` amber-400 |
+| Yellow | `#f59e0b` amber-500 | `#fcd34d` amber-300 |
 | Blue | `#38bdf8` sky-400 | `#7dd3fc` sky-300 |
 | Magenta | `#b388ff` | `#c4b5fd` violet-300 |
 | Cyan | `#0e7490` cyan-700 | `#67e8f9` cyan-300 |
